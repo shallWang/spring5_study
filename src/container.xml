@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--集合的注入-->
+    <bean id="student" class="com.spring.ioc.Student">
+        <property name="courses">
+            <array>
+                <ref bean="course1"/>
+                <ref bean="course2"/>
+                <ref bean="course3"/>
+            </array>
+        </property>
+        <property name="courseList">
+            <list>
+                <ref bean="course1"/>
+                <ref bean="course2"/>
+                <ref bean="course3"/>
+            </list>
+        </property>
+        <property name="courseSet">
+            <set>
+                <ref bean="course1"/>
+                <ref bean="course2"/>
+                <ref bean="course3"/>
+            </set>
+        </property>
+        <property name="courseMap">
+            <map>
+                <entry key="java" value-ref="course1"/>
+                <entry key="spring" value-ref="course2"/>
+                <entry key ="C++" value-ref="course3"/>
+            </map>
+        </property>
+    </bean>
+    <bean id="course1" class="com.spring.ioc.Course">
+        <constructor-arg name="courseName" value="java"/>
+    </bean>
+    <bean id="course2" class="com.spring.ioc.Course">
+        <constructor-arg name="courseName" value="spring"/>
+    </bean>
+    <bean id="course3" class="com.spring.ioc.Course">
+        <constructor-arg name="courseName" value="C++"/>
+    </bean>
+
+</beans>

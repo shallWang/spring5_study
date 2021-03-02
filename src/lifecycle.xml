@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--bean的生存周期-->
+    <bean id="course1" class="com.spring.ioc.Course" init-method="initMethod" destroy-method="destroyMethod">
+        <constructor-arg name="courseName" value="java"/>
+    </bean>
+
+    <!--<bean id="course2" class="com.spring.ioc.Course" init-method="initMethod" destroy-method="destroyMethod"/>-->
+
+
+</beans>

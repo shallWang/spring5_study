@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--无参构造注入-->
+    <bean id="userDaoImpl" class="com.spring.ioc.dao.impl.UserDaoImpl"/>
+
+    <!---使用setter设置属性值-->
+    <bean id = "userService" class="com.spring.ioc.service.UserService">
+        <property name="userDao" ref="userDaoImpl"/>
+    </bean>
+
+    <!--使用有参数构造方法注入-->
+    <bean id="user" class="com.spring.ioc.User">
+        <constructor-arg name = "name" value="shall"/>
+    </bean>
+
+</beans>
