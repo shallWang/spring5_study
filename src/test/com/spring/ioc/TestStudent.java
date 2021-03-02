@@ -14,7 +14,7 @@ public class TestStudent {
     }
 
     @Test
-    public void testStudentContainerNamespce(){
+    public void testStudentContainerNamespace(){
         ApplicationContext context = new ClassPathXmlApplicationContext("namespace.xml");
         Student stu = context.getBean("student", Student.class);
         stu.display();
