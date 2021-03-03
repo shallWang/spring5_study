@@ -1,6 +1,7 @@
 package com.spring.aop.configFile;
 
 import org.aspectj.lang.ProceedingJoinPoint;
+import org.springframework.stereotype.Component;
 
 public class UserProxy {
 
