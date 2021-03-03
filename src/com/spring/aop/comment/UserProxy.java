@@ -5,40 +5,40 @@ import org.aspectj.lang.annotation.*;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
-//ÔöÇ¿Àà
+//å¢å¼ºç±»
 @Component
 @Aspect
-@Order(1)//ÉèÖÃÓÅÏÈ¼¶
+@Order(1)//è®¾ç½®ä¼˜å…ˆçº§
 public class UserProxy {
-    //ÇĞÈëµã³éÈ¡
+    //åˆ‡å…¥ç‚¹æŠ½å–
     @Pointcut(value = "execution(* com.spring.aop.comment.User.add())")
     public void pointDemo(){}
 
-    //Ç°ÖÃÍ¨Öª
+    //å‰ç½®é€šçŸ¥
     @Before(value = "pointDemo()")
     public void before(){
         System.out.println("User before");
     }
 
-    //×îÖÕÍ¨Öª£¨ÓĞÒì³£Ö´ĞĞ£©
+    //æœ€ç»ˆé€šçŸ¥ï¼ˆæœ‰å¼‚å¸¸æ‰§è¡Œï¼‰
     @After(value = "pointDemo()")
     public void after(){
         System.out.println("after");
     }
 
-    //Òì³£Í¨Öª
+    //å¼‚å¸¸é€šçŸ¥
     @AfterThrowing(value = "pointDemo()")
     public void afterThrowing(){
         System.out.println("afterThrowing");
     }
 
-    //ºóÖÃÍ¨Öª£¨ÓĞÒì³£²»Ö´ĞĞ£©
+    //åç½®é€šçŸ¥ï¼ˆæœ‰å¼‚å¸¸ä¸æ‰§è¡Œï¼‰
     @AfterReturning(value = "pointDemo()")
     public void afterReturning(){
         System.out.println("afterReturning");
     }
 
-    //»·ÈÆÍ¨Öª
+    //ç¯ç»•é€šçŸ¥
     @Around(value = "pointDemo()")
     public Object around(ProceedingJoinPoint proceedingJoinPoint) throws Throwable{
         System.out.println("before around");
