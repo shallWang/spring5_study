@@ -8,7 +8,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class TestUser {
     @Test
     public void testUser(){
-        ApplicationContext context = new ClassPathXmlApplicationContext("aop/scan.xml");
+        ApplicationContext context = new ClassPathXmlApplicationContext("aop/config.xml");
         User user = context.getBean("user", User.class);
         user.add();
     }
