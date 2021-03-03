@@ -9,7 +9,7 @@ public class TestCourse {
     @Test
     public void testCourse(){
         ApplicationContext context = new ClassPathXmlApplicationContext("lifecycle.xml");
-        System.out.println("»ñÈ¡ÊµÀı");
+        System.out.println("è·å–å®ä¾‹");
         Course course = context.getBean("course1", Course.class);
         ((ClassPathXmlApplicationContext)context).close();
     }

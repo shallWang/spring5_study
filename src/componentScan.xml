@@ -8,8 +8,7 @@
     <!--组件扫描-->
     <!--如果包下的类有注解，自动创建bean-->
     <!--user-default-filter表示是否使用默认的过滤规则-->
-    <context:component-scan base-package="com.spring.ioc" use-default-filters="false">
+    <context:component-scan base-package="com.spring.ioc">
         <!--根据注解扫描，扫描使用Component注解的-->
-        <context:include-filter type="annotation" expression="org.springframework.stereotype.Component"/>
     </context:component-scan>
 </beans>

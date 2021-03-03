@@ -4,25 +4,25 @@ public class Course {
     private String courseName;
 
     public Course(){
-        System.out.println("¹¹Ôì·½·¨");
+        System.out.println("æ„é€ æ–¹æ³•");
     }
 
     public Course(String courseName){
-        System.out.println("¹¹Ôì·½·¨");
+        System.out.println("æ„é€ æ–¹æ³•");
         this.courseName = courseName;
     }
 
     public void setCourseName(String courseName) {
-        System.out.println("set·½·¨");
+        System.out.println("setæ–¹æ³•");
         this.courseName = courseName;
     }
 
     public void initMethod(){
-        System.out.println("³õÊ¼·½·¨");
+        System.out.println("åˆå§‹æ–¹æ³•");
     }
 
     public void destroyMethod(){
-        System.out.println("Ïú»Ù·½·¨");
+        System.out.println("é”€æ¯æ–¹æ³•");
     }
 
     @Override

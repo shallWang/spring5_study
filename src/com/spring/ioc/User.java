@@ -3,9 +3,9 @@ package com.spring.ioc;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
-//value¿ÉÒÔ²»Ğ´
-//µÈ¼ÛÓÚbeanÖĞµÄid
-//Ä¬ÈÏÊÇÀàÃûµÄÊ××ÖÄ¸Ğ¡Ğ´
+//valueå¯ä»¥ä¸å†™
+//ç­‰ä»·äºbeanä¸­çš„id
+//é»˜è®¤æ˜¯ç±»åçš„é¦–å­—æ¯å°å†™
 @Service(value = "user")
 public class User {
     private String name;
