@@ -2,7 +2,6 @@ package com.spring.aop;
 
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.*;
-import org.junit.Test;
 import org.springframework.stereotype.Component;
 
 //‘ˆ«ø¿‡
