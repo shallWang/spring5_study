@@ -39,10 +39,11 @@ public class UserProxy {
 
     //»·ÈÆÍ¨Öª
     @Around(value = "pointDemo()")
-    public void around(ProceedingJoinPoint proceedingJoinPoint) throws Throwable{
+    public Object around(ProceedingJoinPoint proceedingJoinPoint) throws Throwable{
         System.out.println("before around");
-        proceedingJoinPoint.proceed();
+        Object obj = proceedingJoinPoint.proceed();
         System.out.println("after around");
+        return obj;
     }
 
 
