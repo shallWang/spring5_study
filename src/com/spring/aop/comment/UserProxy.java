@@ -1,4 +1,4 @@
-package com.spring.aop;
+package com.spring.aop.comment;
 
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.*;
@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 @Order(1)//设置优先级
 public class UserProxy {
     //切入点抽取
-    @Pointcut(value = "execution(* com.spring.aop.User.add())")
+    @Pointcut(value = "execution(* com.spring.aop.comment.User.add())")
     public void pointDemo(){}
 
     //前置通知
