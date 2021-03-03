@@ -4,13 +4,12 @@ import com.spring.ioc.service.UserService;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class TestUserService {
     @Test
     public void testUserService(){
-        ApplicationContext context = new ClassPathXmlApplicationContext("construction.xml");
+        ApplicationContext context = new ClassPathXmlApplicationContext("ioc/construction.xml");
         UserService userService = context.getBean("userService", UserService.class);
         System.out.println(userService);
         userService.update();
@@ -18,7 +17,7 @@ public class TestUserService {
 
     @Test
     public void testUserServiceAutowire(){
-        ApplicationContext context = new ClassPathXmlApplicationContext("componentScan.xml");
+        ApplicationContext context = new ClassPathXmlApplicationContext("ioc/componentScan.xml");
         UserService userService = context.getBean("userService", UserService.class);
         System.out.println(userService);
         userService.update();

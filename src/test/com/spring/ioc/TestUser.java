@@ -8,7 +8,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class TestUser {
     @Test
     public void testUser(){
-        ApplicationContext context = new ClassPathXmlApplicationContext("construction.xml");
+        ApplicationContext context = new ClassPathXmlApplicationContext("ioc/construction.xml");
         User user = context.getBean("user", User.class);
         System.out.println(user);
         System.out.println(user.getName());
@@ -16,7 +16,7 @@ public class TestUser {
 
     @Test
     public void testUserComponent(){
-        ApplicationContext context = new ClassPathXmlApplicationContext("componentScan.xml");
+        ApplicationContext context = new ClassPathXmlApplicationContext("ioc/componentScan.xml");
         User user = context.getBean("user", User.class);
         System.out.println(user);
         System.out.println(user.getName());
