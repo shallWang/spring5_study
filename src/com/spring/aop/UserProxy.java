@@ -2,11 +2,13 @@ package com.spring.aop;
 
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.*;
+import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
 //增强类
 @Component
 @Aspect
+@Order(1)//设置优先级
 public class UserProxy {
     //切入点抽取
     @Pointcut(value = "execution(* com.spring.aop.User.add())")
@@ -15,7 +17,7 @@ public class UserProxy {
     //前置通知
     @Before(value = "pointDemo()")
     public void before(){
-        System.out.println("before");
+        System.out.println("User before");
     }
 
     //最终通知（有异常执行）
