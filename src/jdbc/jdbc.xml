@@ -5,7 +5,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
                            http://www.springframework.org/schema/context  http://www.springframework.org/schema/context/spring-context.xsd">
     <context:property-placeholder location="classpath*:jdbc/jdbc.properties"/>
-    <context:component-scan base-package="com.spring.jdbc, com.spring.tx"/>
+    <context:component-scan base-package="com.spring.jdbc"/>
     <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
         <property name="driverClassName" value="${prop.driverClassName}"/>
         <property name="url" value="${prop.url}"/>

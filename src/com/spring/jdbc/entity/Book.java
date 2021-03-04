@@ -1,7 +1,12 @@
 package com.spring.jdbc.entity;
 
+import org.springframework.lang.NonNull;
+import org.springframework.lang.Nullable;
+
 public class Book {
+    @Nullable
     private String name;
+
     private String isbn;
 
     public String getName() {
